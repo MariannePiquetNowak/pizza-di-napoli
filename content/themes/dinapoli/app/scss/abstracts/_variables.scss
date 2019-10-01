@@ -1,0 +1,23 @@
+// Import font-awesome
+$fa-font-path: "~font-awesome/fonts";
+
+// Breakpoints
+$breakpoint-small: 500px;
+$breakpoint-medium: 800px;
+$breakpoint-large: 1000px;
+$breakpoint-xlarge: 1200px;
+
+// Color-text : with the same model of breakpoints
+// Example :
+$color-text: #000000;
+$color-text-alt: #ffffff;
+
+// Color-theme
+$bg-color: #ffffff;
+$bg-color-footer: #cccaca;
+$bg-color-navbar: #cccaca;
+
+// You can use this variable on your scss like that :
+// .container {
+//      color: $color-text;
+//  }
