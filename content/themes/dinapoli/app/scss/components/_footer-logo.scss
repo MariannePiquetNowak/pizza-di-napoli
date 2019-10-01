@@ -1,11 +1,26 @@
 .footer {
+
     &__logo {
-        width: 8em;
-        height: 8em;
+
+        position: absolute;
+        top: -4em;
+
+        img{
+            width: 8em;
+            height: 8em;
+        }
+
+    }
+
+    &__social-nav {
+        margin-top: 5em;
     }
 
     &__social {
+        padding: 0 1em;
+        img {
         width: 3em;
         height: 3em;
+        }
     }
 }

@@ -7,7 +7,7 @@
     label {
         display: block;
         font-weight: bold;
-        color: yellow;
+        color: #dcc29a;
 
     }
 
@@ -16,7 +16,7 @@
         padding: .5em;
         border: none;
         color: black;
-        background-color: lighten(green, 5);
+        background-color: lighten($bg-color, 5);
         // margin-bottom: .7em;
     }
 
