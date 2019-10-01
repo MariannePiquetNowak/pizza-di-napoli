@@ -7,14 +7,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>Theme-base-pattern</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700|Satisfy&display=swap" rel="stylesheet">
+    <title>Pzza Di Napoli</title>
 </head>
 
 <body>
     <div class="wrapper">
 
-        <header class="header">
-            <a href="" class="logo">Accueil</a>
+        <header class="header fixed">
+            <a href="" class="header__home">Accueil</a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
@@ -28,6 +29,11 @@
         <!-- ======= CARROUSSEL STEP ======= -->
         <!-- Documentation carroussel Bootstrap https://mdbootstrap.com/docs/jquery/javascript/carousel/ -->
         <div class="banner">
+            <div class="banner__square">
+                <div class="banner__logo">
+                    <img src="../images/logo-dinapoli.png" alt="brand-nicolas-pencrech" class="brand-nicolas-pencrech">
+                </div>
+            </div>
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -54,14 +60,30 @@
             </div>
         </div>
 
+
         <!-- ======= MAIN CONTAIN STEP ======= -->
 
         <main class="container">
             <section class="article">
                 <!-- here, your article with a text, a photo or other -->
-                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg" alt="image-1" class="article__image">
+                <img src="../images/nicolas-pencrech.jpg" alt="image-1" class="article__image">
                 <div class="article__text">
-                    <h1>Titre article One</h1>
+                    <p>Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas
+                    latasque leges fundamenta libertatis et retinacula sempiterna velut frugi parens et prudens
+                    et dives Caesaribus tamquam liberis suis regenda patrimonii iura permisit.</p>
+
+                    <p>Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti
+                    suspicioni locum, fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita.
+                    Qui ut huic virilem togam deditšnihil dicam hoc loco de me; tantum sit, quantum vos existimatis;
+                    hoc dicam, hunc a patre continuo ad me esse deductum; nemo hunc M. Caelium in illo aetatis flore
+                    vidit nisi aut cum patre aut mecum aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur.</p>
+                </div>
+            </section>
+
+            <section class="article">
+                <!-- here, your article with a text, a photo or other -->
+                <img src="../images/petrir.jpg" alt="image-1" class="article__image">
+                <div class="article__text">
                     <p>Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas
                     latasque leges fundamenta libertatis et retinacula sempiterna velut frugi parens et prudens
                     et dives Caesaribus tamquam liberis suis regenda patrimonii iura permisit.</p>
@@ -88,44 +110,29 @@
 
             <section class="article">
                 <!-- here, your article with a text, a photo or other -->
-                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg" alt="image-2" class="article__image">
-
+                <img src="../images/pizza.png" alt="image-1" class="article__image">
                 <div class="article__text">
-                        <h1>Title article Two</h1>
-                        <p>Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas latasque
-                        leges fundamenta libertatis et retinacula sempiterna velut frugi parens et prudens et dives
-                        Caesaribus tamquam liberis suis regenda patrimonii iura permisit. </p>
+                    <p>Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas
+                    latasque leges fundamenta libertatis et retinacula sempiterna velut frugi parens et prudens
+                    et dives Caesaribus tamquam liberis suis regenda patrimonii iura permisit.</p>
 
-                        <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel
-                        uxoriae condicionis vel commodi alicuius, quod idem adipisci uterque non posset. Quod si
-                        qui longius in amicitia provecti essent, tamen saepe labefactari, si in honoris contentionem
-                        incidissent; pestem enim nullam maiorem esse amicitiis quam in plerisque pecuniae cupiditatem,
-                        in optimis quibusque honoris certamen et gloriae; ex quo inimicitias maximas saepe inter amicissimos exstitisse.</p>
+                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae
+                    condicionis vel commodi alicuius, quod idem adipisci uterque non posset. Quod si qui longius
+                    in amicitia provecti essent, tamen saepe labefactari, si in honoris contentionem incidissent; pestem
+                    enim nullam maiorem esse amicitiis quam in plerisque pecuniae cupiditatem, in optimis quibusque
+                    honoris certamen et gloriae; ex quo inimicitias maximas saepe inter amicissimos exstitisse.</p>
 
-                        <p>Cum autem commodis intervallata temporibus convivia longa et noxia coeperint apparari
-                        vel distributio sollemnium sportularum, anxia deliberatione tractatur an exceptis his
-                        quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio
-                        id placuerit fieri, is adhibetur qui pro domibus excubat aurigarum aut artem tesserariam
-                        profitetur aut secretiora quaedam se nosse confingit.</p>
-                    </div>
-            </section>
+                    <p>Cum autem commodis intervallata temporibus convivia longa et noxia coeperint
+                    apparari vel distributio sollemnium sportularum, anxia deliberatione tractatur an exceptis his
+                    quibus vicissitudo debetur, peregrinum invitari conveniet, et si digesto plene consilio id placuerit
+                    fieri, is adhibetur qui pro domibus excubat aurigarum aut artem tesserariam profitetur aut secretiora
+                    quaedam se nosse confingit.</p>
 
-            <section class="article">
-                <!-- here, your article with a text, a photo or other -->
-                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg" alt="image-3" class="article__image">
-                <div class="article__text">
-                    <h1>A propos</h1>
-                    <p>Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas latasque
-                    leges fundamenta libertatis et retinacula sempiterna velut frugi parens et prudens et
-                    dives Caesaribus tamquam liberis suis regenda patrimonii iura permisit.</p>
-
-                    <p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel
-                    uxoriae condicionis vel commodi alicuius, quod idem adipisci uterque non posset.
-                    Quod si qui longius in amicitia provecti essent, tamen saepe labefactari, si in honoris
-                    contentionem incidissent; pestem enim nullam maiorem esse amicitiis quam in plerisque pecuniae
-                    cupiditatem, in optimis quibusque honoris certamen et gloriae; ex quo inimicitias maximas saepe
-                    inter amicissimos exstitisse.</p>
-                    </p>
+                    <p>Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti
+                    suspicioni locum, fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita.
+                    Qui ut huic virilem togam deditšnihil dicam hoc loco de me; tantum sit, quantum vos existimatis;
+                    hoc dicam, hunc a patre continuo ad me esse deductum; nemo hunc M. Caelium in illo aetatis flore
+                    vidit nisi aut cum patre aut mecum aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur.</p>
                 </div>
             </section>
         </main>
@@ -170,40 +177,38 @@
             </div>
         </section>
 
-        <footer id="footer">
+        <footer id="footer" class="footer">
             <!-- Footer Elements -->
         <div class="container">
 
             <!-- Grid row-->
             <div class="row">
 
+                <img src="../images/logo-dinapoli.png" alt="" class="footer__logo">
+
                 <!-- Grid column -->
                 <div class="col-md-12 py-5">
                     <div class="mb-5 flex-center">
 
                     <!-- Facebook -->
-                    <a class="fb-ic">
-                        <i class="fab fa-facebook-f fa-lg black-text mr-md-5 mr-3 fa-2x"></i>
+                    <a href="#Facebook" class="fb-ic">
+                        <img src="../images/facebook.png" alt="" class="footer__social">
                     </a>
                     <!-- Twitter -->
-                    <a class="tw-ic">
-                        <i class="fab fa-twitter fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+                    <a href="#Twitter" class="fb-ic">
+                        <img src="../images/twitter.png" alt="" class="footer__social">
                     </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic">
-                        <i class="fab fa-google-plus-g fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+                    <!-- Instagram-->
+                    <a href="#Instagram" class="fb-ic">
+                        <img src="../images/insta.png" alt="" class="footer__social">
                     </a>
-                    <!--Linkedin -->
-                    <a class="li-ic">
-                        <i class="fab fa-linkedin-in fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+                    <!--Location -->
+                    <a href="#Location" class="fb-ic">
+                        <img src="../images/periscope.png" alt="" class="footer__social">
                     </a>
-                    <!--Instagram-->
-                    <a class="ins-ic">
-                        <i class="fab fa-instagram fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!--Pinterest-->
-                    <a class="pin-ic">
-                        <i class="fab fa-pinterest fa-lg black-text fa-2x"> </i>
+                    <!--Tripadvisor-->
+                    <a href="#Tripadvisor" class="fb-ic">
+                        <img src="../images/tripadvisor.png" alt="" class="footer__social">
                     </a>
                     </div>
                 </div>

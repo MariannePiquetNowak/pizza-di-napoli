@@ -1,0 +1,49 @@
+.field {
+    width: 100%;
+    padding: 0 .5em;
+    margin-bottom: 1em;
+
+
+    label {
+        display: block;
+        font-weight: bold;
+        color: yellow;
+
+    }
+
+    input[type=text],input[type=email],textarea {
+        width: 100%;
+        padding: .5em;
+        border: none;
+        color: black;
+        background-color: lighten(green, 5);
+        // margin-bottom: .7em;
+    }
+
+    textarea {
+        resize: none;
+        height: 10em;
+    }
+
+    input[type=submit] {
+        background-color: lighten(white, 10);
+        color: black;
+        font-weight: 700;
+        text-transform: capitalize;
+        padding: .3em;
+        border: none;
+        border-radius: 3px;
+    }
+
+    &.is-half {
+        width: 100%;
+
+        @media (min-width: $breakpoint-large){
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+
+
+        }
+    }
+}

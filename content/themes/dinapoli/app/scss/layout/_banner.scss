@@ -1,0 +1,24 @@
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__square {
+        width: 60%;
+        height: 12em;
+        background: $bg-color-article;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 10em;
+            height: 10em;
+            position: absolute;
+            top: 6em;
+        }
+    }
+}

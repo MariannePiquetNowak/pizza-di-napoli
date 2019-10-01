@@ -16,6 +16,14 @@ body {
     position: fixed;
     width: 100%;
     z-index: 3;
+
+
+    // display: flex;
+    // justify-content: space-between;
+    // align-content: center; quand on sera en media
+    padding: .5em 1em;
+    background-color: $bg-color-navbar;
+
   }
 
   .header ul {
@@ -23,19 +31,18 @@ body {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color: #fff;
+    background-color: $bg-color-navbar;
   }
 
   .header li a {
     display: block;
     padding: 20px 20px;
-    border-right: 1px solid #f4f4f4;
     text-decoration: none;
   }
 
   .header li a:hover,
   .header .menu-btn:hover {
-    background-color: #f4f4f4;
+    background-color: $bg-color-navbar;
   }
 
   .header .logo {
@@ -66,7 +73,7 @@ body {
   }
 
   .header .menu-icon .navicon {
-    background: #333;
+    background: $bg-color;
     display: block;
     height: 2px;
     position: relative;
@@ -76,7 +83,7 @@ body {
 
   .header .menu-icon .navicon:before,
   .header .menu-icon .navicon:after {
-    background: #333;
+    background: $bg-color;
     content: '';
     display: block;
     height: 100%;
@@ -100,7 +107,9 @@ body {
   }
 
   .header .menu-btn:checked ~ .menu {
-    max-height: 240px;
+    // max-height: 240px;
+    max-height: 21em;
+
   }
 
   .header .menu-btn:checked ~ .menu-icon .navicon {

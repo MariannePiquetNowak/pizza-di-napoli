@@ -11,10 +11,17 @@
 
 @import
     'components/buttons',
+    'components/contact-fields',
+    'components/contact-form',
+    'components/contact-info',
+    'components/contact-page',
+    'components/footer-logo',
+    'components/header-navbar',
     'components/post';
 
 
 @import
+    'layout/banner',
     'layout/posts',
     'layout/header',
     'layout/container';
