@@ -22,3 +22,79 @@
         }
     }
 }
+
+.banner__text {
+    display: none;
+}
+
+@media (min-width: $breakpoint-large) {
+
+    .banner {
+        &__square {
+
+            height: 16em;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+        }
+
+        &__text {
+            color: $color-text;
+            font-family: $font-text;
+            font-size: $font-size-title;
+            text-align: center;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px solid $color-text;
+            margin: 1em;
+            padding: .5em;
+            line-height: .7em;
+
+            p {
+                line-height: .9em;
+            }
+
+            strong {
+                font-size: $font-size-navbar-link;
+            }
+
+        }
+
+        &__logo {
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 13em;
+                height: 13em;
+                position: absolute;
+                top: 8em;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    .banner {
+        &__square {
+            width: 40em;
+            height: 16em;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            img {
+                width: 15em;
+                height: 15em;
+            }
+
+        }
+
+
+    }
+}
