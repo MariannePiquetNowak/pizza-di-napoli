@@ -29,9 +29,10 @@
 
 @media (min-width: $breakpoint-large) {
 
+
     .banner {
         &__square {
-
+            width: 65%;
             height: 16em;
             display: flex;
             align-items: flex-end;
@@ -80,7 +81,7 @@
 @media (min-width: $breakpoint-xlarge) {
     .banner {
         &__square {
-            width: 50em;
+            width: 55em;
             height: 20em;
             display: flex;
             align-items: flex-end;

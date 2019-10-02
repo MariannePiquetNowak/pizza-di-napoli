@@ -59,8 +59,16 @@
         }
 
         &__text {
-            width: 80%;
+            width: 70%;
             margin: 6.5em 1em 1em 1em;
+        }
+
+        p, strong {
+            font-size: 25px;
+        }
+
+        h1 {
+            text-decoration: underline;
         }
     }
 }
