@@ -3,11 +3,11 @@
     &__logo {
 
         position: absolute;
-        top: -4em;
+        top: -3em;
 
         img{
-            width: 8em;
-            height: 8em;
+            width: 6em;
+            height: 6em;
         }
 
     }
@@ -17,10 +17,18 @@
     }
 
     &__social {
-        padding: 0 1em;
+        padding: 0 .5em;
+        transition-property: transform;
+        transition-duration: .35s;
         img {
         width: 3em;
         height: 3em;
         }
+        img:hover {
+            transform: translateY(-20px);
+            transition: all ease-in-out 150ms;
+        }
     }
+
+
 }

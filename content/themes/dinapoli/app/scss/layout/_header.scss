@@ -136,7 +136,8 @@ body {
       float: left;
     }
     .header li a {
-      padding: 20px 30px;
+      padding: 1em;
+      font-size: $font-size;
     }
     .header .menu {
       clear: none;
@@ -146,4 +147,37 @@ body {
     .header .menu-icon {
       display: none;
     }
+
   }
+
+  @media (min-width: $breakpoint-large) {
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header li a {
+        padding: 0 1.5em;
+        font-size: $font-size-title;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+  }
+
+  @media (min-width: $breakpoint-large) {
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header li a {
+        padding: 0 1.5em;
+        font-size: $font-size-navbar-link;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+}
