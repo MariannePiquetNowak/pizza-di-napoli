@@ -18,6 +18,7 @@
         img {
             width: 35%;
             height: 35%;
+            border-radius: 50%;
         }
     }
 
@@ -29,5 +30,37 @@
         font-size: $font-size;
         font-family: $font-text;
         text-align: center;
+
+    }
+}
+
+@media (min-width: $breakpoint-large){
+    .article {
+        position: relative;
+        width: 70em;
+        height: max-content;
+        margin-bottom: 10em;
+        &:last-child {
+            margin-bottom: 4em;
+        }
+
+
+        &__image {
+            position: absolute;
+            top: -13em;
+            width: 40em;
+            height: 40em;
+
+            img {
+                width: 50%;
+                height: 50%;
+
+            }
+        }
+
+        &__text {
+            width: 80%;
+            margin: 6.5em 1em 1em 1em;
+        }
     }
 }

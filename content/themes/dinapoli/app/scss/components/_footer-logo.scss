@@ -20,15 +20,60 @@
         padding: 0 .5em;
         transition-property: transform;
         transition-duration: .35s;
-        img {
-        width: 3em;
-        height: 3em;
+        i {
+        background: $bg-color;
+        color: $bg-color-footer;
+        font-weight: bold 400;
+        padding: .5em 0;
+        font-size: 35px;
+        text-align: center;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+
+
         }
-        img:hover {
+        i:hover {
             transform: translateY(-20px);
             transition: all ease-in-out 150ms;
         }
     }
 
-
 }
+
+// Media-queries
+
+@media (min-width: $breakpoint-xlarge) {
+    .footer {
+
+        &__logo {
+            position: absolute;
+            top: -4em;
+            left: 0;
+            margin-left: 3em;
+
+
+
+            img{
+                width: 10em;
+                height: 10em;
+            }
+        }
+
+        &__social-nav {
+            margin-top: 2em;
+            display: flex;
+        }
+
+        &__social {
+            margin: 0 .7em;
+            i {
+                padding: .5em 0;
+                width: 2em;
+                height: 2em;
+                font-size: 45px
+                }
+        }
+
+    }
+ }

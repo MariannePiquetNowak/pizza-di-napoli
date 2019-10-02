@@ -6,3 +6,11 @@
     align-items: center;
     position: relative;
 }
+
+@media (min-width: $breakpoint-xlarge) {
+    .footer {
+        padding: 0 2em;
+
+    }
+
+}

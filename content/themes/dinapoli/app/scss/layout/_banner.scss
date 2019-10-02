@@ -80,8 +80,8 @@
 @media (min-width: $breakpoint-xlarge) {
     .banner {
         &__square {
-            width: 40em;
-            height: 16em;
+            width: 50em;
+            height: 20em;
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
@@ -89,8 +89,8 @@
 
         &__logo {
             img {
-                width: 15em;
-                height: 15em;
+                width: 25em;
+                height: 25em;
             }
 
         }
