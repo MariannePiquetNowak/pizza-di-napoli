@@ -3,21 +3,27 @@ $fa-font-path: "~font-awesome/fonts";
 
 // Breakpoints
 $breakpoint-small: 500px;
-$breakpoint-medium: 800px;
+$breakpoint-medium: 768px;
 $breakpoint-large: 1000px;
 $breakpoint-xlarge: 1200px;
 
-// Color-text : with the same model of breakpoints
-// Example :
-$color-text: #000000;
+// Color-text
+$color-text: #dcc29a;
 $color-text-alt: #ffffff;
+$color-text-black: #000000;
+
 
 // Color-theme
-$bg-color: #ffffff;
-$bg-color-footer: #cccaca;
-$bg-color-navbar: #cccaca;
+$bg-color: #dcc29a;
+$bg-color-navbar: #433220;
+$bg-color-footer: #433220;
+$bg-color-article: #4f3c1e;
 
-// You can use this variable on your scss like that :
-// .container {
-//      color: $color-text;
-//  }
+// Fonts
+$font-header: 'Satisfy', cursive;
+$font-text: 'Caveat', cursive;
+
+$font-size: 20px;
+$font-size-title: 25px;
+$font-size-navbar-home: 35px;
+$font-size-navbar-link: 30px;

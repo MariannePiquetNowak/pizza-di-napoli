@@ -1,0 +1,16 @@
+.footer {
+    background: $bg-color-footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    .footer {
+        padding: 0 2em;
+
+    }
+
+}

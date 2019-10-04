@@ -1,0 +1,21 @@
+.header {
+
+    &__home {
+        font-family: $font-header;
+        font-size: $font-size-navbar-home;
+        color: $color-text-alt;
+
+
+    }
+
+    ul a {
+        font-family: $font-header;
+        font-size: $font-size-navbar-link;
+        color: $color-text;
+
+
+    }
+
+}
+
+

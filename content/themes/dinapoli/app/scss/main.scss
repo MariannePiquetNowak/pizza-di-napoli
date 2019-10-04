@@ -6,17 +6,30 @@
     '~font-awesome/scss/font-awesome';
 
 @import
-    'base/base';
+    'base/base',
+    'base/typo';
 
 @import
     'components/buttons',
+    'components/contact-fields',
+    'components/contact-form',
+    'components/contact-info',
+    'components/contact-page',
+    'components/footer-logo',
+    'components/header-navbar',
+    'components/caroussel',
     'components/post';
 
 
 @import
-    'layout/posts',
     'layout/header',
-    'layout/container';
+    'layout/banner',
+    'layout/wrapper',
+    'layout/container',
+    'layout/pizza',
+    'layout/hours',
+    'layout/footer';
+
 
 
 @import

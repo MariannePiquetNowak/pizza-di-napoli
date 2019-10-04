@@ -1,21 +1,12 @@
-.container {
-    width: 100%;
+.container-article {
     margin: 2em 0;
-}
+    max-width: 100%;
 
-.article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__image {
-        width: 50%;
-        height: 50%;
-        border-radius: 5%;
+    @media (min-width: $breakpoint-large) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10em;
     }
 
-    &__text {
-        margin: 1em 0 1em 0;
-        border-bottom: solid 1px black;
-    }
 }

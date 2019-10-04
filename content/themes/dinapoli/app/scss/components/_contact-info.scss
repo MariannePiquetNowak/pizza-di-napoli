@@ -1,0 +1,52 @@
+.contact-info {
+    display: block;
+    width: 100%;
+    padding: 0 0.5em;
+    color: $color-text;
+
+    @media (min-width: $breakpoint-large) {
+        width: 50%;
+    }
+
+    @media (min-width: 1200px) {
+        width: 30%;
+    }
+
+
+    &__part {
+        padding: 1em 0 1em 1em;
+        margin: .5em;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        .fa {
+
+            color: $bg-color-article;
+            background: $bg-color;
+            font-size: $font-size-navbar-link;
+            border-radius: 50%;
+            padding: .5em;
+            margin-bottom: .6em;
+        }
+
+
+        &__content {
+            text-align: center;
+            font-size: $font-size-title;
+            color: $color-text;
+
+            &a {
+                cursor: pointer;
+            }
+
+        }
+
+        &__content:hover {
+
+            color: $color-text;
+
+        }
+
+    }
+}
