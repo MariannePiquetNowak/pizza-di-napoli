@@ -2,7 +2,7 @@
     display: block;
     width: 100%;
     padding: 0 0.5em;
-    color: $color-text;
+    color: $bg-color-article;
 
     @media (min-width: $breakpoint-large) {
         width: 50%;
@@ -22,19 +22,22 @@
 
         .fa {
 
-            color: $bg-color-article;
-            background: $bg-color;
+            color: $bg-color;
+            background: $bg-color-article;
             font-size: $font-size-navbar-link;
             border-radius: 50%;
             padding: .5em;
             margin-bottom: .6em;
+            @media (min-width: 1200px) {
+                margin-right: .7em;
+            }
         }
 
 
         &__content {
             text-align: center;
             font-size: $font-size-title;
-            color: $color-text;
+            color: $bg-color-article;
 
             &a {
                 cursor: pointer;
@@ -44,7 +47,7 @@
 
         &__content:hover {
 
-            color: $color-text;
+            color: $bg-color-article;
 
         }
 

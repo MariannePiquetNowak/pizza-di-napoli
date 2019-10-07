@@ -7,7 +7,7 @@
     label {
         display: block;
         font-weight: bold;
-        color: #dcc29a;
+        color: $bg-color-article;
 
     }
 
@@ -16,7 +16,7 @@
         padding: .5em;
         border: none;
         color: black;
-        background-color: lighten($bg-color, 5);
+        background-color: lighten(white, 5);
         // margin-bottom: .7em;
     }
 
@@ -26,8 +26,8 @@
     }
 
     input[type=submit] {
-        background-color: lighten(white, 10);
-        color: black;
+        background-color: lighten($bg-color-article, 10);
+        color: $bg-color;
         font-weight: 700;
         text-transform: capitalize;
         padding: .3em;
@@ -38,12 +38,5 @@
     &.is-half {
         width: 100%;
 
-        @media (min-width: $breakpoint-large){
-            display: flex;
-            flex-wrap: wrap;
-            width: 50%;
-
-
-        }
     }
 }

@@ -4,5 +4,6 @@ wp-config.php
 /content/*
 !/content/plugins/
 /content/plugins/*
+!/content/plugins/dinapoli-settings
 !/content/themes/
 /content/themes/*
