@@ -17,7 +17,15 @@ Après avoir échanger avec mon client, il est prévu de revoir entièrement le 
 - Mise en place d'un plugin de géolocalisation 
 - Formation au dashboard pour le client
 - Ajout d'une sidebar ou d'un menu déroulant pour la page "histoire de la pizza"
-- Hébergement 
+- Hébergement et création d'un nom de domaine
+
+### Hors du code 
+ 
+- Mise en place d'une page Facebook
+- Mise en place d'une page instagram 
+- Mise en place d'un Google Business
+- Création d'un compte Tripadvisor 
+- Formation à ces outils pour le client
 
 ### V2 
 
