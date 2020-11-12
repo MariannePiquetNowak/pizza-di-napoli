@@ -21,9 +21,9 @@ Après avoir échanger avec mon client, il est prévu de revoir entièrement le 
 
 ### Hors du code 
  
+- Mise en place d'un Google Business
 - Mise en place d'une page Facebook
 - Mise en place d'une page instagram 
-- Mise en place d'un Google Business
 - Création d'un compte Tripadvisor 
 - Formation à ces outils pour le client
 
