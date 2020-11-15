@@ -16,7 +16,7 @@
 
             if ($wp_query->have_posts()): while ($wp_query->have_posts()): $wp_query->the_post();
 
-                get_template_part('template-parts/content/post', 'products');
+                get_template_part('template-parts/posts/post', 'products');
 
             endwhile; endif;
 

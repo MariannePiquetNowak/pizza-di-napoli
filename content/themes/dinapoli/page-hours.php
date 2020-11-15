@@ -7,18 +7,20 @@
         <?php
 
             $args = [
-                'category_name' => 'horaires',
+                'post_type' => 'page',
+                'name' => 'horaires',
             ];
 
             $wp_query = new WP_Query($args);
 
-            if ($wp_query->have_posts()): while ($wp_query->have_posts()): $wp_query->the_post();
+                if ($wp_query->have_posts()): while ($wp_query->have_posts()): $wp_query->the_post();
 
-               get_template_part('template-parts/content/post', 'hours');
+                    get_template_part('template-parts/posts/post', 'hours');
 
-            endwhile; endif;
+                endwhile; endif;
 
-            wp_reset_postdata();
+                wp_reset_postdata();
+
 
         ?>
     </section>

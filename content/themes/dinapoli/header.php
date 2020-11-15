@@ -15,7 +15,7 @@
         <header class="header fixed">
            <?php get_template_part('template-parts/menu/nav-header'); ?>
         </header>
-        <?php get_template_part('template-parts/content/banner'); ?>
+        <?php get_template_part('template-parts/elements/banner'); ?>
 
 
 
