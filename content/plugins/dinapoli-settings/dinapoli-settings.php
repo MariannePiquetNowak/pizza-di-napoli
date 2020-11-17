@@ -12,14 +12,12 @@ Version: 1.0.2
 // ======== Sécurisation du plugin ======== \\
 
 // Empêche l'éxécution du plugin en dehors du contexte
-if (!defined('WPINC')) {
-    die();
-    }
+if (!defined('WPINC')) {die();}
 
 // ======== Classes nécessaires au plugin ======== \\
 
 // CPT Pizza
-require plugin_dir_path(__FILE__) . 'inc/pizzas_cpt.php';
+require plugin_dir_path(__FILE__) . 'inc/pizza_cpt.php';
 
 // Rôles administrateurs
 require plugin_dir_path(__FILE__) . 'inc/role_admin.php';
@@ -40,6 +38,7 @@ $pizza_role = new Role_Admin();
 
 register_activation_hook(__FILE__, [$pizza_role, "role_activate"]);
 register_deactivation_hook(__FILE__, [$pizza_role, "role_desactivate"]);
+
 
 
 

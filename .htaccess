@@ -1,7 +1,8 @@
 <IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{REQUEST_URI} !^sousdossier/
+RewriteEngine On
+RewriteBase /pizza-di-napoli/
+RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1
+RewriteRule . /pizza-di-napoli/index.php [L]
 </IfModule>

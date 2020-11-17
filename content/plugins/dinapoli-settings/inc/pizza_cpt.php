@@ -1,20 +1,16 @@
 <?php 
 
-class Pizza_Cpt
+class Pizzas_Cpt
 {
-    public function __construct()
+    public function __construct() 
     {
         add_action('init', [$this, 'create_cpt_pizzas']);
         add_action('init', [$this, 'create_taxonomies']);
     }
 
-    // =========== Création du CPT des Pizzas ============== \\ 
+    // =========== CREATION DU CUSTOM POST TYPE PIZZAS ============== \\
 
-    // Cette fonction permet au responsable d'avoir un menu Pizza sur la sidebar du dashboard de WP
-    // Il pourra facilement ajouter de nouvelles pizzas à son menu, à la même manière qu'un article classique
-
-    // Source icones : @Link { https://developer.wordpress.org/resource/dashicons/ }
-    public function create_cpt_pizzas()
+    public function create_cpt_pizzas() 
     {
         $labels = [
             "name"                  => "Pizzas",
@@ -53,43 +49,44 @@ class Pizza_Cpt
                 "title",
                 "editor",
                 "thumbnail",
+                "excerpt",
                 "custom-fields",
-                "revision"
+                "revision", 
             ],
-            "public"                => true, // Accéder à nos recettes sur le front
+            "public"                => true, // Accéder à nos pizzas sur le front
             "hierarchical"          => false,
-            "menu_position"         => 5, // Au dessus de Articles
+            "menu_position"         => null, // Au dessus de Articles
             "menu_icon"             => "dashicons-carrot",
-            'has_archive'           => true, // Je veux que mes recettes soient bien archivées
+            'show_in_menu'          => true,
+            'show_in_ui'            => true, 
+            'show_in_rest'          => true, 
+            'show_in_admir_bar'     => true,
+            'has_archive'           => true, // Je veux que mes pizzas soient bien archivées
             'rewrite'               => [
                 'slug'              => 'pizza',
                 'with_front'        => true, 
             ],
-            "capabilities"  => [
-                'edit_post'          => 'edit_pizzas', 
-                'read_post'          => 'edit_pizzas', 
-                'delete_post'        => 'edit_pizzas',  
+            'capabilities' => [
+                'edit_post'          => 'edit_pizza', 
+                'read_post'          => 'read_pizza', 
+                'delete_post'        => 'delete_pizza',  
                 'edit_posts'         => 'edit_pizzas', 
-                'edit_others_posts'  => 'edit_pizzas', 
-                'publish_posts'      => 'edit_pizzas',       
-                'read_private_posts' => 'edit_pizzas', 
-                'create_posts'       => 'edit_pizzas', 
-            ],
-
-            'show_in_ui'            => true, 
-            'show_in_rest'          => true, 
-            // 'rest_base'             => 'pizzas'
-        
+                'edit_others_posts'  => 'edit_others_pizzas', 
+                'publish_posts'      => 'publish_pizzas',       
+                'read_private_posts' => 'read_private_pizzas', 
+                'create_posts'       => 'create_pizzas',  
+            ],    
+           
         ];
 
         register_post_type("pizzas", $args);
     }
 
-    // =========== Création des taxonomies ============== \\
+    // =========== CREATION DES TAXONOMIES ============== \\
 
-    public function create_taxonomies()
+    public function create_taxonomies() 
     {
-        // Taxonomie "ingrédients"
+        // Création d'une taxonomie ingrédients
         $labels =  [ 
             'name'                          => 'Ingrédients',
             'singular_name'                 => 'Ingrédient',
@@ -117,19 +114,19 @@ class Pizza_Cpt
             'show_in_ui'            => true, 
             'show_in_rest'          => true, 
             'capabilities'          => [
-                'manage_terms'  => 'edit_pizza_taxo',
-                'edit_terms'    => 'edit_pizza_taxo',
-                'delete_terms'  => 'edit_pizza_taxo',
-                'assign_terms'  => 'edit_pizza_taxo',
+                'manage_terms'  => 'manage_pizzas_taxo',
+                'edit_terms'    => 'edit_pizzas_taxo',
+                'delete_terms'  => 'delete_pizzas_taxo',
+                'assign_terms'  => 'assign_pizzas_taxo',
             ],
         ];
 
         // nom de la taxo, lié au cpt, on lui donne nos arguments
         register_taxonomy('ingredient', 'pizzas', $args);
 
-        // =============================================================== \\
+    // =============================================================== \\
 
-        // Taxonomie "styles" pour les styles de pizzas
+        // Création d'une taxo Type pour relié les pizzas par catégories de pizzas
         $labels =  [ 
             'name'                          => 'Styles',
             'singular_name'                 => 'Style',
@@ -156,9 +153,34 @@ class Pizza_Cpt
             'hierarchical' => true, 
             'show_in_ui'   => true, 
             'show_in_rest' => true,
+            'capabilities'          => [
+                'manage_terms'  => 'manage_styles_taxo',
+                'edit_terms'    => 'edit_styles_taxo',
+                'delete_terms'  => 'delete_styles_taxo',
+                'assign_terms'  => 'assign_styles_taxo',
+            ],
 
         ];
 
         register_taxonomy('style', "pizzas", $args);
+        
+    }
+
+    // re-calcul des routes à l'activation et la désactivation du plugin 
+    // Pour éviter d'aller enregistrer les permaliens à chaque nouveau post du cpt
+    public function pizzas_activate()
+    {
+        // Exécute la méthode du plugin qui permet de décaler le cpt à WP
+        $this->create_cpt_pizzas();
+        // pareil pour la taxonomie
+        $this->create_taxonomies();
+        // Exécute la fonction native de WP qui permet de recalculer les routes et les droits
+        flush_rewrite_rules();
+    }
+
+    public function pizzas_desactivate()
+    {
+        // On recalcule juste les routes et les droits (on ne lui déclare plus le cpt)
+        flush_rewrite_rules();
     }
 }
