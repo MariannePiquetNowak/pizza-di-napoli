@@ -5,7 +5,7 @@ const path = require("path");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 let config = {
@@ -17,6 +17,11 @@ let config = {
   output: {
     path: path.resolve(__dirname, "./public"),
     filename: "js/app.js"
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
   optimization: {
     minimizer: [
@@ -83,14 +88,14 @@ let config = {
       jQuery: 'jquery',
       Rellax: 'rellax',
     }),
-    new CopyPlugin([
-      {
-        from: 'app/assets/**',
-        to: '.',
-        toType: 'dir',
-        transformPath: (targetPath) => targetPath.replace(/^app\/assets\//, '')
-      }
-    ]),
+    // new CopyPlugin([
+    //   {
+    //     from: 'app/assets/**',
+    //     to: '.',
+    //     toType: 'dir',
+    //     transformPath: (targetPath) => targetPath.replace(/^app\/assets\//, '')
+    //   }
+    // ]),
   ]
 };
 

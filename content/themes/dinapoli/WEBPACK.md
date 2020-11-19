@@ -13,3 +13,7 @@
 - `npm run build:prod` : Génère les resources front avec compression (minify, uglify) en vue d'une utilisation dans un environnement de production
 - `npm run clean` : Supprime les fichiers générés par Webpack
 - `npm run clean:all` : Supprime les fichiers générés par Webpack ainsi que le répertoire des dépendances installées avec NPM (`node_modules`)
+
+
+### Notes: 
+- "webpack-cli": "^3.3.6" => Latest version number affects the npm launcher
