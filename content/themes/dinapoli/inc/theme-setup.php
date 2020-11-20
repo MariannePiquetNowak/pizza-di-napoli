@@ -15,7 +15,8 @@ if (!function_exists('dinapoli_setup')) :
 
         // Comme je fait un register_nav_menus, le add_theme_support est automatiquement exe
         register_nav_menus([
-            'menu_header' => 'Menu de navigation en haut de la page'
+            'menu_header' => 'Menu de navigation en haut de la page',
+            'manu_footer' => 'Menu pour les réseaux sociaux'
         ]);
 
 

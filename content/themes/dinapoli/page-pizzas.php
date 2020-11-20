@@ -10,23 +10,24 @@ Pour la définir, dans le BO, Pages > Page concernée (ici, Recettes) > Attribut
 
 
         <!-- ======= MAIN CONTAIN STEP ======= -->
-
+    <main class="container-article">
         <?php
 
             $args = [
                 'post_type' => 'pizzas',
-               // 'orderby' => 'title',
+                'orderby' => 'title',
             ];
 
             $wp_query = new WP_Query($args);
 
             if ($wp_query->have_posts()): while ($wp_query->have_posts()): $wp_query->the_post();
 
-               get_template_part('template-parts/posts/post', 'pizza');
+               get_template_part('template-parts/posts/post', 'archive');
 
             endwhile; endif;
 
         ?>
+    </main>
 
 
 <?php get_footer(); ?>

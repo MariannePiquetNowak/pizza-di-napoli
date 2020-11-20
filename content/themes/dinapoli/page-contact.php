@@ -15,7 +15,7 @@
 
             if ($wp_query->have_posts()): while ($wp_query->have_posts()): $wp_query->the_post();
 
-               the_content();
+               the_content(); // Créer le shotcode contact
 
             endwhile; endif;
 
