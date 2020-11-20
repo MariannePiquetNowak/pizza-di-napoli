@@ -41,6 +41,15 @@
 
 }
 
+.footer-copyright {
+    color: $color-text;
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+    }
+}
+
 // Media-queries
 
 @media (min-width: $breakpoint-xlarge) {
