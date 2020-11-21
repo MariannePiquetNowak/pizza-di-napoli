@@ -11,7 +11,7 @@ function get_first_meta($post_id, $meta_name)
 // Récupère le prix d'une pizza
 function get_pizza_price($post_id)
 {
-    return get_first_meta($post_id, 'prix');
+    return get_first_meta($post_id, 'prix') . '€';
 }
 
 // ================================================================================ \\
@@ -20,18 +20,19 @@ function get_pizza_price($post_id)
 function get_pizza_ingredients($post_id)
 {
     $html = "";
+    $array = [];
 
     // Récupère la taxonomie "ingrédient" => dans /plugins/pizza_cpt.php/
     $array_ingredients = wp_get_post_terms($post_id, 'ingredient');
 
-    foreach ($array_ingredients as $wp_term)
-    {
-        $html .= '<a href="'.get_term_link($wp_term).'">';
-        $html .= ucfirst($wp_term->name);
-        $html .= '</a>';
-    }
-
-    return $html;
+        foreach ($array_ingredients as $wp_term)
+        {
+            $html .= '<li><a class="pizza__terms" href="'.get_term_link($wp_term). '">';
+            $html .= ucfirst($wp_term->name);
+            $html .= ','.'</a></li>';           
+            
+        }
+        return $html;
 }
 
 // ================================================================================ \\

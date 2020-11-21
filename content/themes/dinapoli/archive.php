@@ -12,7 +12,7 @@ Permet donc d'être reliée par types, ingrédients
     <?php 
 
         $args = [
-            'ppost_type' => 'pizzas',
+            'post_type' => 'pizzas',
         ];
 
         $wp_query = new WP_Query($args);

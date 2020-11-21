@@ -10,7 +10,7 @@ Pour la définir, dans le BO, Pages > Page concernée (ici, Recettes) > Attribut
 
 
         <!-- ======= MAIN CONTAIN STEP ======= -->
-    <main class="container-article">
+    <main class="container-pizza">
         <?php
 
             $args = [
